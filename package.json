@@ -1,0 +1,20 @@
+{
+  "name": "anirudh-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@netlify/database": "^2.0.3",
+    "drizzle-orm": "^1.0.0-beta.22",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-beta.22"
+  }
+}

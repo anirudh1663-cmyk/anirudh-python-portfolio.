@@ -1,42 +1,21 @@
-# Anirudh Singh — Python Portfolio
+# Anirudh Singh — Portfolio
 
-A responsive, animated personal portfolio built with **Python, Flask, HTML, CSS and JavaScript**.
+Responsive HTML, CSS, and JavaScript portfolio with a Netlify Server API and persistent PostgreSQL contact storage through Netlify Database and Drizzle ORM.
 
-## Features
-- Gen-Z inspired dark design with animated gradient accents
-- Smooth scrolling, reveal-on-scroll animations and hover interactions
-- Responsive layout for mobile, tablet and desktop
-- Skills, projects, about and contact sections
-- Flask contact form backed by SQLite
-- Simple visitor counter backed by SQLite
+## Development
 
-## Run locally
-1. Install Python 3.10 or newer.
-2. Open a terminal in this folder.
-3. Create and activate a virtual environment (recommended).
-4. Install dependencies:
+Use Node.js 24 or newer. Run `npm install`, then `netlify dev --port 8889`.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Netlify publishes `public/` and detects `netlify/server/index.mjs` automatically. No frontend build is required. Database connections are managed by Netlify. Schema changes belong in `db/schema.ts`; run `npm run db:generate -- --name describe_change` to generate migrations. Netlify applies migrations during deployment.
 
-5. Start the website:
+`npm test` verifies request validation, successful storage, storage failure, spam handling, origin checks, body limits, and method handling. These tests inject a storage adapter and do not connect to the live database.
 
-   ```bash
-   python app.py
-   ```
+## Contact messages
 
-6. Open `http://127.0.0.1:5000` in your browser.
+`POST /api/contact` accepts JSON containing `name`, `email`, and `message`. Messages are stored privately in the `messages` table, with a creation timestamp. There is deliberately no public endpoint for reading messages. Site owners can inspect messages in Netlify Database tooling. The form stores messages; it does not send email notifications.
 
-The SQLite database (`portfolio.db`) is created automatically.
+`GET /api/health` checks server availability, not database connectivity. Invalid submissions return 400, storage outages return 503, and successful saves return 201. The frontend keeps entered values on failure and resets only after success.
 
-## Before publishing
-- Replace the sample project descriptions with your real work.
-- Add your GitHub, LinkedIn and email links in `templates/index.html`.
-- Change the Flask `secret_key` in `app.py`.
-- Do not commit private credentials or personal data.
+## Editing content
 
-## Publish on GitHub
-Create a repository named `anirudh-python-portfolio`, then upload this folder. Add a screenshot of the site to the README after running it locally.
-
-> Note: GitHub Pages hosts static sites only. This Flask version needs a Python hosting service to run the backend and contact form.
+Edit `public/index.html` to update the biography, projects, and profile links. Styles and contact submission behavior live in `public/style.css` and `public/script.js`. Existing learning projects are presented as work in progress rather than completed client work.
