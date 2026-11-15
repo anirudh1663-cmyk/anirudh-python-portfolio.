@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anirudh Singh's personal portfolio — Python, development and projects.">
+  <title>Anirudh Singh | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="glow glow-one"></div><div class="glow glow-two"></div>
+  <nav class="nav">
+    <a class="brand" href="#home">AS<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+  </nav>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> AVAILABLE FOR LEARNING & COLLABORATION</div>
+        <p class="hello">Hey, I'm</p>
+        <h1>Anirudh<br><span class="gradient-text">Singh.</span></h1>
+        <h2>Python Developer <span class="muted">/</span> CSE Student</h2>
+        <p class="intro">I enjoy turning ideas into useful digital experiences, learning how things work, and building projects one line of code at a time.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="button secondary" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-meta"><span>BASED IN INDIA</span><span class="meta-line"></span><span>ALWAYS BUILDING</span></div>
+      </div>
+      <div class="code-wrap reveal">
+        <div class="code-card">
+          <div class="code-top"><div class="dots"><i></i><i></i><i></i></div><span>developer.py</span><span class="code-lang">PY</span></div>
+          <div class="code-body">
+            <p><b class="ln">01</b> <span class="purple">class</span> <span class="yellow">Developer</span>:</p>
+            <p><b class="ln">02</b> &nbsp;&nbsp;<span class="purple">def</span> <span class="blue">__init__</span>(self):</p>
+            <p><b class="ln">03</b> &nbsp;&nbsp;&nbsp;&nbsp;self.name = <span class="green">"Anirudh"</span></p>
+            <p><b class="ln">04</b> &nbsp;&nbsp;&nbsp;&nbsp;self.skills = [</p>
+            <p><b class="ln">05</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Python"</span>, <span class="green">"Java"</span>,</p>
+            <p><b class="ln">06</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"SQL"</span>, <span class="green">"C#"</span></p>
+            <p><b class="ln">07</b> &nbsp;&nbsp;&nbsp;&nbsp;]</p>
+            <p><b class="ln">08</b> &nbsp;&nbsp;&nbsp;&nbsp;self.mindset = <span class="green">"keep_learning"</span></p>
+            <p><b class="ln">09</b></p>
+            <p><b class="ln">10</b> &nbsp;&nbsp;<span class="purple">def</span> <span class="blue">build</span>(self):</p>
+            <p><b class="ln">11</b> &nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">return</span> <span class="green">"Ideas → reality"</span><span class="cursor"></span></p>
+          </div>
+          <div class="code-bottom"><span>● SYSTEM ONLINE</span><span>~/portfolio</span></div>
+        </div>
+        <div class="float-chip chip-one">✦ Curious mind</div>
+        <div class="float-chip chip-two">{"status": "building"}</div>
+      </div>
+      <a class="scroll-hint" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-label reveal">01 / ABOUT ME</div>
+      <div class="about-grid">
+        <h2 class="section-title reveal">Curiosity first.<br><span class="gradient-text">Code follows.</span></h2>
+        <div class="about-text reveal">
+          <p>I'm a Computer Science student focused on building a strong foundation in programming and software development. I like exploring new tools, solving problems, and learning by making things.</p>
+          <p>Right now, I'm growing my skills in Python, Java, databases and practical project development. This portfolio is a snapshot of that journey.</p>
+          <div class="stats"><div><strong>04</strong><span>CORE SKILLS</span></div><div><strong>{{ visits }}</strong><span>PAGE VISITS</span></div><div><strong>∞</strong><span>THINGS TO LEARN</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-label reveal">02 / TOOLKIT</div>
+      <h2 class="section-title reveal">Things I'm <span class="gradient-text">working with.</span></h2>
+      <div class="skill-grid">
+        <div class="skill-card reveal"><span class="skill-icon">Py</span><h3>Python</h3><p>Core programming, scripting and Flask basics.</p><span class="tag">LEARNING & BUILDING</span></div>
+        <div class="skill-card reveal"><span class="skill-icon">J</span><h3>Java</h3><p>Object-oriented programming and problem solving.</p><span class="tag">LEARNING & BUILDING</span></div>
+        <div class="skill-card reveal"><span class="skill-icon">SQL</span><h3>SQL</h3><p>Working with relational data and queries.</p><span class="tag">LEARNING & BUILDING</span></div>
+        <div class="skill-card reveal"><span class="skill-icon">C#</span><h3>C#</h3><p>Exploring language fundamentals and application logic.</p><span class="tag">LEARNING & BUILDING</span></div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-label reveal">03 / SELECTED WORK</div>
+      <div class="project-heading"><h2 class="section-title reveal">Projects & <span class="gradient-text">experiments.</span></h2><span class="project-note">A work in progress — more coming soon.</span></div>
+      <div class="project-grid">
+        <article class="project-card reveal"><div class="project-art art-one"><span>01</span><div class="orbit">PY</div></div><div class="project-info"><div class="project-type">WEB DEVELOPMENT · PYTHON</div><h3>Personal Portfolio</h3><p>A responsive portfolio built with Flask, HTML, CSS and JavaScript, with a SQLite-backed contact form.</p><span class="project-link">YOU'RE VIEWING IT ↗</span></div></article>
+        <article class="project-card reveal"><div class="project-art art-two"><span>02</span><div class="terminal-art">&gt;_</div></div><div class="project-info"><div class="project-type">PYTHON · PRACTICE</div><h3>Python Mini Projects</h3><p>A growing collection of small programs to practise Python fundamentals and problem-solving.</p><span class="project-link">ADD YOUR GITHUB REPO ↗</span></div></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-label reveal">04 / CONTACT</div>
+      <div class="contact-grid">
+        <div class="reveal"><h2 class="section-title">Have an idea?<br><span class="gradient-text">Let's connect.</span></h2><p class="contact-copy">I'm open to learning opportunities, interesting projects and meaningful collaborations.</p><div class="socials"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:your.email@example.com">Email ↗</a></div><p class="edit-note">Remember to replace the profile links and email with your own.</p></div>
+        <form class="contact-form reveal" method="POST" action="#contact">
+          <label>Your name<input name="name" placeholder="What should I call you?" required></label>
+          <label>Email address<input type="email" name="email" placeholder="you@example.com" required></label>
+          <label>Your message<textarea name="message" rows="4" placeholder="Tell me what's on your mind..." required></textarea></label>
+          <button class="button primary" type="submit">Send message <span>↗</span></button>
+          {% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<p class="flash {{ category }}">{{ message }}</p>{% endfor %}{% endwith %}
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#home">AS<span>.</span></a><span>DESIGNED & BUILT BY ANIRUDH SINGH</span><a href="#home">BACK TO TOP ↑</a></footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
