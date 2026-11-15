@@ -1,7 +1,6 @@
-__pycache__/
-*.py[cod]
-.venv/
-venv/
+node_modules/
+.netlify/
 .env
-portfolio.db
-.DS_Store
+.env.*
+__pycache__/
+*.db
